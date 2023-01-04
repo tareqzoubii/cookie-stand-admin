@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ReportTable from "./ReportTable";
 
 export default function Form(){
      
@@ -30,47 +31,62 @@ export default function Form(){
      return (
        <>
          <section className="bg-gray-200 py-4 px-4 rounded-md text-center">
-        <form className="m-6" onSubmit={submitHandler}>
-          <label className="block font-bold text-2xl mb-2"> Cookies Shop </label>
-          <label className="block font-bold text-2xl mb-2"> Put your order here </label>
-          <br></br>
-          <label className="block font-bold text-xl mb-2"> Location </label>
-          <input
-            onChange={handleChange}
-            placeholder="Location"
-            name="location"
-            className="border rounded-md py-3 px-4 text-center"
-          />
-          <br></br>
-          <label className="block font-bold text-xl mb-2"> Maximum Cookies per hour </label>
-          <input
-            onChange={handleChange}
-            placeholder="maximum"
-            name="max"
-            className="border rounded-md py-3 px-4 text-center"
-          />
-          <label className="block font-bold text-xl mb-2"> Minimum Cookies per hour </label>
-          <input
-            onChange={handleChange}
-            placeholder="minimum"
-            name="min"
-            className="border rounded-md py-3 px-4 text-center"
-          />
-          <label className="block font-bold text-xl mb-2"> Average Cookies per sale </label>
-          <input
-            onChange={handleChange}
-            placeholder="average"
-            name="avg"
-            className="border rounded-md py-3 px-4 text-center "
-          />
-          <br></br>
-          <button className="bg-green-900 py-2 px-10 rounded-md text-white font-bold hover:bg-green-800 ">
-            Create
-          </button>
-        </form>
-      </section>
+           <form className="m-6" onSubmit={submitHandler}>
+             <label className="block font-bold text-2xl mb-2">
+               {" "}
+               Cookies Shop{" "}
+             </label>
+             <label className="block font-bold text-2xl mb-2">
+               {" "}
+               Put your order here{" "}
+             </label>
+             <br></br>
+             <label className="block font-bold text-xl mb-2"> Location </label>
+             <input
+               onChange={handleChange}
+               placeholder="Location"
+               name="location"
+               className="border rounded-md py-3 px-4 text-center"
+             />
+             <br></br>
+             <label className="block font-bold text-xl mb-2">
+               {" "}
+               Maximum Cookies per hour{" "}
+             </label>
+             <input
+               onChange={handleChange}
+               placeholder="maximum"
+               name="max"
+               className="border rounded-md py-3 px-4 text-center"
+             />
+             <label className="block font-bold text-xl mb-2">
+               {" "}
+               Minimum Cookies per hour{" "}
+             </label>
+             <input
+               onChange={handleChange}
+               placeholder="minimum"
+               name="min"
+               className="border rounded-md py-3 px-4 text-center"
+             />
+             <label className="block font-bold text-xl mb-2">
+               {" "}
+               Average Cookies per sale{" "}
+             </label>
+             <input
+               onChange={handleChange}
+               placeholder="average"
+               name="avg"
+               className="border rounded-md py-3 px-4 text-center "
+             />
+             <br></br>
+             <button className="bg-green-900 py-2 px-10 rounded-md text-white font-bold hover:bg-green-800 ">
+               Create
+             </button>
+           </form>
+         </section>
          <section className="w-full pt-10 text-center ">
-                    {fullReplyState.length > 0 && fullReplyState.map((item,index)=>{
+           {/* {fullReplyState.length > 0 && fullReplyState.map((item,index)=>{
                          return(
                               <div>
                                    <p>
@@ -78,8 +94,12 @@ export default function Form(){
                                    </p>
                               </div>
                          )
-                    })}
-               </section>
+                    })} */}
+           {fullReplyState.length > 0 && (
+             <ReportTable report={fullReplyState} />
+           )}
+           {fullReplyState.length == 0 && <h2>No Cookie Stands Available</h2>}
+         </section>
        </>
      );
 }
