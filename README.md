@@ -1,7 +1,10 @@
-# Lab 32
+# Lab 32+33+34
 
 ### Cookie Stand Admin 
 
+#### Lab32: Intro to NextJs & Tailwind-css
+#### Lab33: Custom Hooks
+#### Lab34: Context API
 ##### Created By : Tareq Zoubii
 
 ### App
