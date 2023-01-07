@@ -6,9 +6,9 @@ export default function ReportTable({ report }) {
   return (
     <div>
       <Table bordered hover >
-        <thead className="bg-green-900 py-2 px-10 rounded-md text-white font-bold hover:bg-green-800">
-          <tr>
-            <th>Location</th>
+        <thead className="bg-green-900 py-2 px-10 rounded-md text-white font-bold dark:text-white">
+          <tr >
+            <th >Location</th>
             {timeSlots.map((slot) => {
               return <th>{slot}</th>;
             })}
@@ -24,8 +24,8 @@ export default function ReportTable({ report }) {
                     count = 0
                 }
               return (
-                <tr>
-                  <td className="py-3">{location}</td>
+                <tr className="dark:text-white">
+                  <td>{location}</td>
                   {sales[count].map((hour) => {
                     total = total + hour
                     return <td>{hour}</td>;

@@ -30,9 +30,9 @@ export default function Form(){
 
      return (
        <>
-         <section className="bg-gray-200 py-4 px-4 rounded-md text-center">
+         <section className="py-4 px-4 rounded-md text-center font-bold- text-green-900 dark:text-white">
            <form className="m-6" onSubmit={submitHandler}>
-             <label className="block font-bold text-2xl mb-2">
+             <label className="block font-bold text-2xl mb-2 ">
                {" "}
                Cookies Shop{" "}
              </label>
@@ -46,7 +46,7 @@ export default function Form(){
                onChange={handleChange}
                placeholder="Location"
                name="location"
-               className="border rounded-md py-3 px-4 text-center"
+               className="border rounded-md py-3 px-4 text-center dark:text-black"
              />
              <br></br>
              <label className="block font-bold text-xl mb-2">
@@ -57,7 +57,7 @@ export default function Form(){
                onChange={handleChange}
                placeholder="maximum"
                name="max"
-               className="border rounded-md py-3 px-4 text-center"
+               className="border rounded-md py-3 px-4 text-center dark:text-black"
              />
              <label className="block font-bold text-xl mb-2">
                {" "}
@@ -67,7 +67,7 @@ export default function Form(){
                onChange={handleChange}
                placeholder="minimum"
                name="min"
-               className="border rounded-md py-3 px-4 text-center"
+               className="border rounded-md py-3 px-4 text-center dark:text-black"
              />
              <label className="block font-bold text-xl mb-2">
                {" "}
@@ -77,7 +77,7 @@ export default function Form(){
                onChange={handleChange}
                placeholder="average"
                name="avg"
-               className="border rounded-md py-3 px-4 text-center "
+               className="border rounded-md py-3 px-4 text-center dark:text-black"
              />
              <br></br>
              <button className="bg-green-900 py-2 px-10 rounded-md text-white font-bold hover:bg-green-800 ">
