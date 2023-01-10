@@ -19,3 +19,4 @@
 ![image7](/folder/pic7.png)
 #### Lab35
 ![image6](/folder/pic5.png)
+> username: admin password: admin
